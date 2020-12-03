@@ -154,7 +154,7 @@
             // numHashes
             // 
             this.numHashes.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numHashes.Location = new System.Drawing.Point(280, 181);
+            this.numHashes.Location = new System.Drawing.Point(261, 181);
             this.numHashes.Maximum = new decimal(new int[] {
             -559939585,
             902409669,
@@ -166,7 +166,7 @@
             0,
             0});
             this.numHashes.Name = "numHashes";
-            this.numHashes.Size = new System.Drawing.Size(598, 39);
+            this.numHashes.Size = new System.Drawing.Size(617, 39);
             this.numHashes.TabIndex = 10;
             this.numHashes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numHashes.Value = new decimal(new int[] {
@@ -182,9 +182,9 @@
             this.label3.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(262, 32);
+            this.label3.Size = new System.Drawing.Size(243, 32);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Hashlist Size";
+            this.label3.Text = "Unique salts";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
