@@ -62,7 +62,7 @@
             this.lblKeyspace.Location = new System.Drawing.Point(12, 306);
             this.lblKeyspace.Name = "lblKeyspace";
             this.lblKeyspace.Size = new System.Drawing.Size(188, 27);
-            this.lblKeyspace.TabIndex = 1;
+            this.lblKeyspace.TabIndex = 9;
             this.lblKeyspace.Text = "Keyspace = ";
             this.lblKeyspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -73,7 +73,7 @@
             this.label1.Location = new System.Drawing.Point(12, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 32);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Mask";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -84,7 +84,7 @@
             this.label2.Location = new System.Drawing.Point(12, 235);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 32);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 8;
             this.label2.Text = "Speed";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -104,7 +104,7 @@
             0});
             this.numSpeed.Name = "numSpeed";
             this.numSpeed.Size = new System.Drawing.Size(750, 39);
-            this.numSpeed.TabIndex = 4;
+            this.numSpeed.TabIndex = 2;
             this.numSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numSpeed.Value = new decimal(new int[] {
             1,
@@ -120,7 +120,7 @@
             this.lblTime.Location = new System.Drawing.Point(12, 364);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(284, 27);
-            this.lblTime.TabIndex = 5;
+            this.lblTime.TabIndex = 10;
             this.lblTime.Text = "Exhaustion Time: ";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -137,7 +137,7 @@
             this.cmbUnit.Location = new System.Drawing.Point(884, 232);
             this.cmbUnit.Name = "cmbUnit";
             this.cmbUnit.Size = new System.Drawing.Size(108, 40);
-            this.cmbUnit.TabIndex = 7;
+            this.cmbUnit.TabIndex = 3;
             this.cmbUnit.SelectedIndexChanged += new System.EventHandler(this.cmbUnit_SelectedIndexChanged);
             // 
             // btnOptimizer
@@ -146,7 +146,7 @@
             this.btnOptimizer.Location = new System.Drawing.Point(12, 12);
             this.btnOptimizer.Name = "btnOptimizer";
             this.btnOptimizer.Size = new System.Drawing.Size(202, 80);
-            this.btnOptimizer.TabIndex = 8;
+            this.btnOptimizer.TabIndex = 5;
             this.btnOptimizer.Text = "Wordlist Optimizer";
             this.btnOptimizer.UseVisualStyleBackColor = true;
             this.btnOptimizer.Click += new System.EventHandler(this.btnOptimizer_Click);
@@ -167,7 +167,7 @@
             0});
             this.numHashes.Name = "numHashes";
             this.numHashes.Size = new System.Drawing.Size(617, 39);
-            this.numHashes.TabIndex = 10;
+            this.numHashes.TabIndex = 1;
             this.numHashes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numHashes.Value = new decimal(new int[] {
             1,
@@ -183,7 +183,7 @@
             this.label3.Location = new System.Drawing.Point(12, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(243, 32);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 7;
             this.label3.Text = "Unique salts";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -204,7 +204,7 @@
             this.txtCustom.Location = new System.Drawing.Point(599, 31);
             this.txtCustom.Name = "txtCustom";
             this.txtCustom.Size = new System.Drawing.Size(393, 44);
-            this.txtCustom.TabIndex = 12;
+            this.txtCustom.TabIndex = 4;
             this.txtCustom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCustom.TextChanged += new System.EventHandler(this.txtCustom_TextChanged);
             // 
@@ -215,7 +215,7 @@
             this.lblCustom.Location = new System.Drawing.Point(594, 78);
             this.lblCustom.Name = "lblCustom";
             this.lblCustom.Size = new System.Drawing.Size(236, 27);
-            this.lblCustom.TabIndex = 13;
+            this.lblCustom.TabIndex = 12;
             this.lblCustom.Text = "Custom Mask = ";
             this.lblCustom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -237,6 +237,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblKeyspace);
             this.Controls.Add(this.txtMask);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Keyspace Calculator";
             this.Load += new System.EventHandler(this.frmMain_Load);

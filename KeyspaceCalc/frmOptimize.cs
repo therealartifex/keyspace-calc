@@ -43,13 +43,17 @@ namespace KeyspaceCalc
 
         private void btnOptimize_Click(object sender, EventArgs e)
         {
+            txtStatus.Clear();
             if (words.LongCount() > 0 && masks.Length > 0)
             {
-                var matches = 0;
-                var matchlist = new List<string>();
+                var matchmasks = new Dictionary<string, ulong>();
+                var matchwords = new List<string>();
+                var minRemoved = words.RemoveAll(word => word.Length < numMinLen.Value);
+                txtStatus.AppendText($"Removing all words with less than {numMinLen.Value} chars: {minRemoved}\r\n");
+                txtStatus.AppendText($"Removing words that have matching masks in your mask file...\r\n");
                 foreach (var w in words)
                 {
-                    // first, construct mask from original word
+                    // construct mask from original word
                     var wordmask = "";
                     foreach (var c in w)
                     {
@@ -83,15 +87,22 @@ namespace KeyspaceCalc
                     // now, see if the generated mask matches one in the list
                     if (masks.Contains(wordmask))
                     {
-                        matchlist.Add(w);
-                        ++matches;
+                        matchwords.Add(w);
+                        if (matchmasks.ContainsKey(wordmask))
+                            matchmasks[wordmask]++;
+                        else
+                            matchmasks.Add(wordmask, 1);
                     }
                 }
-
-                var optlist = words.Except(matchlist);
-                txtStatus.AppendText($"Words removed: {matches}\r\nOutput wordlist: {outfilePath}\r\n");
-                
+                var sortedMasks = matchmasks.OrderByDescending(_ => _.Value);
+                foreach (var kv in sortedMasks)
+                {
+                    txtStatus.AppendText($"{kv.Key,-30}{kv.Value}\r\n");
+                }
+                var optlist = words.Except(matchwords);
+                txtStatus.AppendText($"Total words removed: {matchwords.LongCount() + minRemoved}\r\nFinal wordlist size: {optlist.LongCount()}\r\n");
                 File.WriteAllLines(outfilePath, optlist.ToArray());
+                txtStatus.AppendText($"Output wordlist: {outfilePath}\r\n");
             }
         }
     }
