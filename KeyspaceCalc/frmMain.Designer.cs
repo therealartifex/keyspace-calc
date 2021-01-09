@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCustom = new System.Windows.Forms.TextBox();
             this.lblCustom = new System.Windows.Forms.Label();
+            this.btnMaskFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHashes)).BeginInit();
             this.SuspendLayout();
@@ -145,7 +146,7 @@
             this.btnOptimizer.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOptimizer.Location = new System.Drawing.Point(12, 12);
             this.btnOptimizer.Name = "btnOptimizer";
-            this.btnOptimizer.Size = new System.Drawing.Size(202, 80);
+            this.btnOptimizer.Size = new System.Drawing.Size(196, 80);
             this.btnOptimizer.TabIndex = 5;
             this.btnOptimizer.Text = "Wordlist Optimizer";
             this.btnOptimizer.UseVisualStyleBackColor = true;
@@ -190,10 +191,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(274, 36);
+            this.label4.Font = new System.Drawing.Font("Lucida Console", 18F);
+            this.label4.Location = new System.Drawing.Point(359, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(319, 32);
+            this.label4.Size = new System.Drawing.Size(234, 24);
             this.label4.TabIndex = 11;
             this.label4.Text = "Custom Mask (?c)";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,11 +220,23 @@
             this.lblCustom.Text = "Custom Mask = ";
             this.lblCustom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnMaskFile
+            // 
+            this.btnMaskFile.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaskFile.Location = new System.Drawing.Point(214, 12);
+            this.btnMaskFile.Name = "btnMaskFile";
+            this.btnMaskFile.Size = new System.Drawing.Size(139, 80);
+            this.btnMaskFile.TabIndex = 13;
+            this.btnMaskFile.Text = "Load File";
+            this.btnMaskFile.UseVisualStyleBackColor = true;
+            this.btnMaskFile.Click += new System.EventHandler(this.btnMaskFile_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 450);
+            this.Controls.Add(this.btnMaskFile);
             this.Controls.Add(this.lblCustom);
             this.Controls.Add(this.txtCustom);
             this.Controls.Add(this.label4);
@@ -264,6 +277,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCustom;
         private System.Windows.Forms.Label lblCustom;
+        private System.Windows.Forms.Button btnMaskFile;
     }
 }
 

@@ -108,7 +108,7 @@ namespace KeyspaceCalc
 
             sync_ctx.Post(new SendOrPostCallback(o =>
             {
-                lblCurrentMask.Text = $"Current Mask: {mask} = {(ulong)o}";
+                //lblCurrentMask.Text = $"Current Mask: {mask} = {(ulong)o}";
             }), count);
 
             prevTime = timeNow;
