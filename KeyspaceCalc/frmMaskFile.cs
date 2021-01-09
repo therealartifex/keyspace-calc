@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KeyspaceCalc
@@ -18,6 +11,9 @@ namespace KeyspaceCalc
         string fileLocation;
         NumberFormatInfo NFI;
 
+        // Calculate keyspace and push statistics to lbls
+        // TODO: Optimise to not process mask file every kick,
+        // however, semi-modern hardware shouldn't have an issue
         private void Kick()
         {
             BigInteger keyspace, currentKeyspace = 1;
@@ -28,6 +24,7 @@ namespace KeyspaceCalc
             string outputTime = "";
             keyspace = (BigInteger)numHashes.Value;
 
+            // Multipliers for (K/M/G/T)H/s
             switch (cmbUnit.SelectedIndex)
             {
                 case 1:
@@ -44,18 +41,22 @@ namespace KeyspaceCalc
                     break;
             }
 
-            // process main masks
             if (!File.Exists(fileLocation))
                 return;
+
+            //Read file into memory
             string[] lines = File.ReadAllLines(fileLocation);
             int count = 0;
             int skip = Convert.ToInt32(numSkip.Value);
             foreach(string line in lines)
             {
                 count++;
+                // Skip masks
                 if (count <= skip)
                     continue;
                 chars = line.ToCharArray();
+
+                // Calculate keyspace per mask
                 for (var i = 0; i < chars.Length; ++i)
                 {
                     if (chars[i] == '?' && i < chars.Length - 1)
@@ -94,9 +95,9 @@ namespace KeyspaceCalc
                 keyspace += currentKeyspace;
                 currentKeyspace = 1;
             }
+            // Calculate keyspace and subdivide into time units
             keyspace--;
             outputKeySpace = keyspace.ToString("N0", NFI);
-            //t = TimeSpan.FromSeconds((double)(keyspace / speed));
             time = BigInteger.Divide(keyspace, (BigInteger)speed);
             var days = BigInteger.Divide(time, 86400);
             BigInteger.DivRem(time, 86400, out time);
@@ -105,6 +106,7 @@ namespace KeyspaceCalc
             var minutes = BigInteger.Divide(time, 60);
             BigInteger.DivRem(time, 60, out time);
 
+            // Update lbls
             outputTime = $"{days} days, {hours} hrs, {minutes} min, {time} sec";
             lblKeyspace.Text = $"Keyspace = {outputKeySpace}";
             lblTime.Text = $"Exhaustion Time: {outputTime}";
@@ -113,13 +115,9 @@ namespace KeyspaceCalc
             
         }
 
-        public frmMaskFile()
-        {
-            InitializeComponent();
-        }
-
         private void btnMaskFile_Click(object sender, EventArgs e)
         {
+            // Open [Browse] file explorer
             OpenFileDialog fileBrowser = new OpenFileDialog();
 
             if (fileBrowser.ShowDialog() == DialogResult.OK)
@@ -131,6 +129,7 @@ namespace KeyspaceCalc
         }
 
         void dragAndDrop(object sender, DragEventArgs e) {
+            // Grab file location from drag-and-dropped files
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
             if (files != null && files.Length != 0)
             {
@@ -163,6 +162,11 @@ namespace KeyspaceCalc
         private void numSkip_ValueChanged(object sender, EventArgs e)
         {
             Kick();
+        }
+
+        public frmMaskFile()
+        {
+            InitializeComponent();
         }
     }
 }
