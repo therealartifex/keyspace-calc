@@ -53,6 +53,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMaskFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaskFile.Designer.cs">
+      <DependentUpon>frmMaskFile.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOptimize.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaskFile.resx">
+      <DependentUpon>frmMaskFile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOptimize.resx">
       <DependentUpon>frmOptimize.cs</DependentUpon>

@@ -176,5 +176,11 @@ namespace KeyspaceCalc
         {
             Kick();
         }
+
+        private void btnMaskFile_Click(object sender, EventArgs e)
+        {
+            var frm = new frmMaskFile();
+            frm.ShowDialog();
+        }
     }
 }
