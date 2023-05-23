@@ -133,7 +133,7 @@ namespace KeyspaceCalc
                     outputTime = $"{days} days, {hours} hrs, {minutes} min, {time} sec";
                 }
             }
-
+            lblMask.Text = $"Mask({txtMask.Text.Replace("?","").Length})";
             lblKeyspace.Text = $"Keyspace = {outputKeySpace}";
             lblTime.Text = $"Exhaustion Time: {outputTime}";
             keyspace = 1;

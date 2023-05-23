@@ -30,7 +30,7 @@
         {
             this.txtMask = new System.Windows.Forms.TextBox();
             this.lblKeyspace = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMask = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.numSpeed = new System.Windows.Forms.NumericUpDown();
             this.lblTime = new System.Windows.Forms.Label();
@@ -48,9 +48,9 @@
             // txtMask
             // 
             this.txtMask.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMask.Location = new System.Drawing.Point(109, 126);
+            this.txtMask.Location = new System.Drawing.Point(180, 126);
             this.txtMask.Name = "txtMask";
-            this.txtMask.Size = new System.Drawing.Size(883, 44);
+            this.txtMask.Size = new System.Drawing.Size(812, 44);
             this.txtMask.TabIndex = 0;
             this.txtMask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMask.TextChanged += new System.EventHandler(this.txtMask_TextChanged);
@@ -66,16 +66,17 @@
             this.lblKeyspace.Text = "Keyspace = ";
             this.lblKeyspace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblMask
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 131);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 32);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Mask";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMask.AutoSize = true;
+            this.lblMask.BackColor = System.Drawing.Color.Transparent;
+            this.lblMask.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMask.Location = new System.Drawing.Point(12, 131);
+            this.lblMask.Name = "lblMask";
+            this.lblMask.Size = new System.Drawing.Size(166, 32);
+            this.lblMask.TabIndex = 6;
+            this.lblMask.Text = "Mask(01)";
+            this.lblMask.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -83,7 +84,7 @@
             this.label2.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 235);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 32);
+            this.label2.Size = new System.Drawing.Size(109, 32);
             this.label2.TabIndex = 8;
             this.label2.Text = "Speed";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,7 +183,7 @@
             this.label3.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 32);
+            this.label3.Size = new System.Drawing.Size(242, 32);
             this.label3.TabIndex = 7;
             this.label3.Text = "Unique salts";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -193,7 +194,7 @@
             this.label4.Font = new System.Drawing.Font("Lucida Console", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(274, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(319, 32);
+            this.label4.Size = new System.Drawing.Size(318, 32);
             this.label4.TabIndex = 11;
             this.label4.Text = "Custom Mask (?c)";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,7 +235,7 @@
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.numSpeed);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblMask);
             this.Controls.Add(this.lblKeyspace);
             this.Controls.Add(this.txtMask);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -253,7 +254,7 @@
 
         private System.Windows.Forms.TextBox txtMask;
         private System.Windows.Forms.Label lblKeyspace;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMask;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numSpeed;
         private System.Windows.Forms.Label lblTime;
