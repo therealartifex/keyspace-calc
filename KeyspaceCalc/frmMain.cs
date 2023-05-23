@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 using System.Numerics;
 using System.Windows.Forms;
 
@@ -133,7 +134,8 @@ namespace KeyspaceCalc
                     outputTime = $"{days} days, {hours} hrs, {minutes} min, {time} sec";
                 }
             }
-            lblMask.Text = $"Mask({txtMask.Text.Replace("?","").Length})";
+            int uniqueChars = txtMask.Text.Replace("?", "").Length + (txtMask.Text.Length - txtMask.Text.Replace("??", "").Length) / 2;
+            lblMask.Text = $"Mask({uniqueChars})";
             lblKeyspace.Text = $"Keyspace = {outputKeySpace}";
             lblTime.Text = $"Exhaustion Time: {outputTime}";
             keyspace = 1;
