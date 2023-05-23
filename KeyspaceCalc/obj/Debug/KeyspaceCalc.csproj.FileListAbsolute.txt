@@ -1,0 +1,12 @@
+C:\tmp\keyspace-calc-master\KeyspaceCalc\bin\Debug\KeyspaceCalc.exe.config
+C:\tmp\keyspace-calc-master\KeyspaceCalc\bin\Debug\KeyspaceCalc.exe
+C:\tmp\keyspace-calc-master\KeyspaceCalc\bin\Debug\KeyspaceCalc.pdb
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.csproj.AssemblyReference.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.csproj.SuggestedBindingRedirects.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.frmMain.resources
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.frmOptimize.resources
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.Properties.Resources.resources
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.csproj.GenerateResource.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.csproj.CoreCompileInputs.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.exe
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Debug\KeyspaceCalc.pdb

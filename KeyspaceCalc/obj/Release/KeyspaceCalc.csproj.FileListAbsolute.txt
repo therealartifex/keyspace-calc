@@ -8,3 +8,15 @@ C:\Users\brian\source\repos\KeyspaceCalc\KeyspaceCalc\obj\Release\KeyspaceCalc.c
 C:\Users\brian\source\repos\KeyspaceCalc\KeyspaceCalc\obj\Release\KeyspaceCalc.csproj.CoreCompileInputs.cache
 C:\Users\brian\source\repos\KeyspaceCalc\KeyspaceCalc\obj\Release\KeyspaceCalc.exe
 C:\Users\brian\source\repos\KeyspaceCalc\KeyspaceCalc\obj\Release\KeyspaceCalc.pdb
+C:\tmp\keyspace-calc-master\KeyspaceCalc\bin\Release\KeyspaceCalc.exe.config
+C:\tmp\keyspace-calc-master\KeyspaceCalc\bin\Release\KeyspaceCalc.exe
+C:\tmp\keyspace-calc-master\KeyspaceCalc\bin\Release\KeyspaceCalc.pdb
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.csproj.AssemblyReference.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.csproj.SuggestedBindingRedirects.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.frmMain.resources
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.frmOptimize.resources
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.Properties.Resources.resources
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.csproj.GenerateResource.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.csproj.CoreCompileInputs.cache
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.exe
+C:\tmp\keyspace-calc-master\KeyspaceCalc\obj\Release\KeyspaceCalc.pdb
